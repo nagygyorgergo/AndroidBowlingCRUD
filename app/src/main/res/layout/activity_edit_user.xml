@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditUserActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        app:title="Edit User"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="?attr/colorSurface"
+        app:titleCentered="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/nameLayout"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstNameLayout"
+            android:layout_weight="1"
+            android:layout_marginEnd="5sp"
+            android:hint="First Name"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstNameET"
+                android:inputType="textCapSentences"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/lastNameLayout"
+            android:layout_marginStart="5sp"
+            android:layout_weight="1"
+            android:hint="Last Name"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lastNameET"
+                android:inputType="textCapSentences"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
+        android:hint="Phone Number"
+        android:id="@+id/phoneLayout"
+        android:layout_below="@id/nameLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phoneET"
+            android:inputType="phone"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
+        android:id="@+id/bioLayout"
+        android:layout_below="@id/phoneLayout"
+        android:hint="Bio">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences|textMultiLine"
+            android:id="@+id/bioET"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bioLayout"
+        android:layout_alignStart="@id/bioLayout"
+        android:text="Delete"
+        app:backgroundTint="@android:color/holo_red_light"
+        android:layout_marginStart="20sp"
+        android:id="@+id/delete"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_alignEnd="@id/bioLayout"
+        android:layout_below="@id/bioLayout"
+        android:id="@+id/save"
+        android:layout_marginEnd="20sp"/>
+
+</RelativeLayout>
