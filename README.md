@@ -1,3 +1,4 @@
-# Firebase-Firestore-CRUD
-This repository contains code of Firebase Firestore CRUD function implementation in android studio using java.
-YouTube tutorial: https://youtu.be/sAnffThJwuo
+# Firebase Android Bowling CRUD
+
+Mobil alkalmazásfejlesztés gyakorlati kurzus beadandó feladat.
+A projekt gyökerében található egy excel táblázat, mely segíti a javítást.
