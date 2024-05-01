@@ -12,6 +12,10 @@
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\8.0\\com.example.firestorecrud.app-main-36:\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\8.0\\com.example.firestorecrud.app-merged_res-34:\\drawable_bowling_bg.jpg.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\8.0\\com.example.firestorecrud.app-main-36:\\drawable\\bowling_bg.jpg"
+    },
+    {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\8.0\\com.example.firestorecrud.app-merged_res-34:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\8.0\\com.example.firestorecrud.app-main-36:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
@@ -30,6 +34,10 @@
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\8.0\\com.example.firestorecrud.app-merged_res-34:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Dell\\.gradle\\daemon\\8.0\\com.example.firestorecrud.app-main-36:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\8.0\\com.example.firestorecrud.app-merged_res-34:\\drawable_background_image.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\8.0\\com.example.firestorecrud.app-main-36:\\drawable\\background_image.xml"
     },
     {
         "merged": "C:\\Users\\Dell\\.gradle\\daemon\\8.0\\com.example.firestorecrud.app-merged_res-34:\\mipmap-xhdpi_ic_launcher.webp.flat",

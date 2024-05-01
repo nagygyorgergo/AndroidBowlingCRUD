@@ -6,11 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- ImageView as background -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bowling_bg"
+        android:scaleType="centerCrop"
+        android:contentDescription="bgImage" />
+
+    <!-- All your other components go on top of the ImageView -->
     <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/toolbar"
-        app:title="Reservations List"
+        app:title="Reservations"
         app:titleCentered="true"
         android:background="?attr/colorPrimary"
         app:titleTextColor="?attr/colorSurface"/>
@@ -66,7 +76,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:checked="false"
-        android:text="My res." />
+        android:text="Own" />
 
 
 </RelativeLayout>

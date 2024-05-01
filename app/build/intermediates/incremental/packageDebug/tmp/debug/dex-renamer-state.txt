@@ -1,4 +1,4 @@
-#Sun Mar 10 17:37:44 CET 2024
+#Wed May 01 14:39:46 CEST 2024
 base.0=C\:\\Users\\Dell\\AndroidStudioProjects\\BowlingCRUD01\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Dell\\AndroidStudioProjects\\BowlingCRUD01\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\Dell\\AndroidStudioProjects\\BowlingCRUD01\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex

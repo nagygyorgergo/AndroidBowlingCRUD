@@ -2,11 +2,14 @@ R_DEF: Internal format may change without notice
 local
 color black
 color white
+drawable background_image
+drawable bowling_bg
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable round_add_24
 drawable round_refresh_24
 id addReservation
+id backgroundImage
 id bioET
 id bioLayout
 id buttonLayout

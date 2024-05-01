@@ -1,157 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditReservationActivity">
+    android:fillViewport="true">
 
-    <com.google.android.material.appbar.MaterialToolbar
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbar"
-        app:title="Edit Reservation"
-        android:background="?attr/colorPrimary"
-        app:titleTextColor="?attr/colorSurface"
-        app:titleCentered="true"/>
+        tools:context=".EditReservationActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20sp"
-        android:layout_below="@id/toolbar"
-        android:id="@+id/nameLayout"
-        android:orientation="horizontal">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:title="Edit Reservation"
+            app:titleCentered="true"
+            app:titleTextColor="?attr/colorSurface"/>
+
+        <LinearLayout
+            android:id="@+id/nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:layout_below="@id/toolbar"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstNameLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="5sp"
+                android:hint="First Name"
+                style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/firstNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastNameLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5sp"
+                android:hint="Last Name"
+                style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lastNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="0sp"
+            android:id="@+id/phoneLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/firstNameLayout"
-            android:layout_weight="1"
-            android:layout_marginEnd="5sp"
-            android:hint="First Name"
-            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_below="@id/nameLayout"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
+            android:hint="Phone Number">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/firstNameET"
-                android:inputType="textCapSentences"/>
-
+                android:inputType="phone"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="0sp"
+            android:id="@+id/bioLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lastNameLayout"
-            android:layout_marginStart="5sp"
-            android:layout_weight="1"
-            android:hint="Last Name"
-            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+            android:layout_margin="20sp"
+            android:layout_below="@id/phoneLayout"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
+            android:hint="Comment">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bioET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lastNameET"
-                android:inputType="textCapSentences"/>
-
+                android:inputType="textCapSentences|textMultiLine"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20sp"
-        android:layout_marginEnd="20sp"
-        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
-        android:hint="Phone Number"
-        android:id="@+id/phoneLayout"
-        android:layout_below="@id/nameLayout">
-
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/guestCountET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/phoneET"
-            android:inputType="phone"/>
+            android:layout_below="@id/bioLayout"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginTop="20sp"
+            android:hint="Guest Count"
+            android:inputType="number"/>
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20sp"
-        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
-        android:id="@+id/bioLayout"
-        android:layout_below="@id/phoneLayout"
-        android:hint="Comment">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <TextView
+            android:id="@+id/currentDateTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textCapSentences|textMultiLine"
-            android:id="@+id/bioET"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/guestCountET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Guest Count"
-        android:inputType="number"
-        android:layout_below="@id/bioLayout"
-        android:layout_marginStart="20sp"
-        android:layout_marginEnd="20sp"
-        android:layout_marginTop="20sp"/>
-
-    <TextView
-        android:id="@+id/currentDateTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Current Date: Not set"
-        android:textSize="16sp"
-        android:layout_below="@id/selectDateButton"
-        android:layout_marginStart="20sp"
-        android:layout_marginEnd="20sp"
-        android:layout_marginTop="10sp"/>
-
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/selectDateButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Select Date"
-        android:layout_below="@id/guestCountET"
-        android:layout_marginStart="20sp"
-        android:layout_marginEnd="20sp"
-        android:layout_marginTop="20sp"/>
-
-    <LinearLayout
-        android:id="@+id/buttonLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/selectDateButton"
-        android:layout_marginStart="20sp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="20sp"
-        android:gravity="center"
-        android:orientation="horizontal">
+            android:layout_below="@id/selectDateButton"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginTop="10sp"
+            android:text="Current Date: Not set"
+            android:textSize="16sp"/>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/delete"
-            android:layout_width="wrap_content"
+            android:id="@+id/selectDateButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="Delete"
-            app:backgroundTint="@android:color/holo_red_light" />
+            android:layout_below="@id/guestCountET"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginTop="20sp"
+            android:text="Select Date"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/save"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save" />
-    </LinearLayout>
-</RelativeLayout>
+            android:layout_below="@id/currentDateTV"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20sp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="Delete"
+                app:backgroundTint="@android:color/holo_red_light"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
